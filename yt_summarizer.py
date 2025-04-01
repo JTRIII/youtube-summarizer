@@ -32,9 +32,23 @@ def extract_transcript(video_id):
 #####################################################################
 
 def summarize_transcript(transcript):
-    # prompt = f"Summarize the following YouTube video transcript:\n\n{transcript}\n\nSummary:"
-    # prompt = f"Summarize the following YouTube video transcript, breaking it down into key sections such as introduction, main points, and conclusion:\n\n{transcript}\n\nSummary (include Introduction, Key Points, and Conclusion):"
-    prompt = f"Summarize the following YouTube video transcript in a way that provides all key details, insights, and explanations so that the reader does not need to watch the video. Make sure to cover all important topics in detail, providing examples if available:\n\n{transcript}\n\nComprehensive Summary:"
+    prompt = f"""
+    Generate a detailed summary of the following YouTube video transcript. Ensure the summary is so informative that the reader fully understands the content without needing to watch the video. 
+
+    Structure the response as follows:
+    - Introduction: Provide context about the speaker, their background, and the purpose of the video.
+    - Step-by-step guide: Clearly outline key steps mentioned, including any specific techniques, tools, or real-world examples.
+    - Challenges & Solutions: Highlight any potential difficulties mentioned and how to overcome them.
+    - Key Takeaways: List actionable insights that viewers can apply immediately.
+    - Conclusion: Summarize the final message, including any calls to action.
+
+    Ensure clarity, completeness, and structure.
+
+    Transcript:
+    {transcript}
+
+    Comprehensive Summary:
+    """
 
     try:
         # Call the LLaMA 3 model via Ollama
