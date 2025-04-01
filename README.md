@@ -1,31 +1,58 @@
 # YouTube Summarizer
 
-Watching an entire youtube video to get some information can be a hassel. This program passes the transcript from a youtube video to the Llama 3.2 LLM and then gives the user a summary with important details. This will allow for a better use of users time to get the information they need. 
+Watching an entire youtube video to get some information can be a hassel. This program retrieves the transcript from a YouTube video and passes it to the Llama 3.2 LLM to generate a concise summary with important details. This allows users to quickly access relevant information without having to watch the full video.
 
 ---
 
-# Use the Program
+# Installation and Use of the Program
 
-## Clone Respoitory
+## 1. Clone Respoitory
 ```
 git clone https://github.com/JTRIII/youtube-summarizer.git
+cd youtube-summarizer
 ```
 
-## Download Dependencies
+## 2. Set up Virtual Environment
+
+#### Windows
+```
+# Create a virtual environment
+python -m venv venv
+
+# Activate the virtual environment
+venv\Scripts\activate
+```
+
+#### Mac or Linux
+```
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate
+```
+
+## 3. Upgrade Pip
+```
+pip install --upgrade pip
+```
+
+## 4. Download Dependencies
 ```
 pip install -r requirements.txt
 ```
 
-## Run the program
+## 5. Run the program
 
-### Windows
+#### Windows
 ```
 python yt_summarizer.py
 ```
 
-### Mac or Linux
+#### Mac or Linux
 ```
 python3 yt_summarizer.py
 ```
 
-Now paste the Youtube Video's link and let the program go to work!
+## 6. Paste the YouTube URL
+Once the program runs, simply paste the YouTube video link when prompted, and the summarizer will generate a detailed summary for you.
